@@ -6,82 +6,23 @@
   🔍 An in-game UI for exploring, debugging and modifying Unity games.
 </p>
 <p align="center">
-  ✔️ Supports most Unity versions from 5.2 to 2021+ (IL2CPP and Mono).
+  ⚠️ Strictly supports BSIPA4 for Beat Saber.
 </p>
 <p align="center">
   ✨ Powered by <a href="https://github.com/yukieiji/UniverseLib">UniverseLib</a><br>
-  🛠️ This is fork of <a href="https://github.com/sinai-dev/UnityExplorer">UnityExplorer</a> maintained by yukieiji<br>
 </p>
 
-## Changes from original 
-- Bug fixes due to continued development
-  - Il2CPP and Mono support for BepInEx 6.x be.647+([DL:Il2CPP](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx.Unity.IL2CPP.CoreCLR.zip)/[DL:Mono](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx6.Unity.Mono.zip))
-  - Compatible with MelonLoader 0.6.x(OpenBeta) or later([DL](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.MelonLoader.IL2CPP.CoreCLR.zip))
-  - and etc..
-- Some new featuree
-- Stabilize overall performance by adjusting project settings, etc.
 
-If there are any bugs or features you want, please create a [ticket](https://github.com/yukieiji/UnityExplorer/issues/new/choose)!
+### ⚠️ This README is subject to change ⚠️
 
-### Comparison with other forks
-- New features while keeping high compatibility
-- stability
+## (Planned) Changes from original 
+- Dedicated BSIPA4 plugin
+- Specialized tools for BeatSaber environment artists, which include:
+  - 3D-Interactable BloomFog Manipulation
+  - Live ILightWithId object Manipulation for testing
+  - Object To ChromaID and ChromaID to Object utility
 
-# Releases  [![](https://img.shields.io/github/downloads/sinai-dev/UnityExplorer/total.svg)](../../releases)
-
-[![](https://img.shields.io/github/release/yukieiji/UnityExplorer.svg?label=version)](../../releases/latest) [![](https://img.shields.io/github/workflow/status/yukieiji/UnityExplorer/Build%20UnityExplorer)](https://github.com/yukieiji/UnityExplorer/actions) [![](https://img.shields.io/github/downloads/yukieiji/UnityExplorer/latest/total.svg)](../../releases/latest)
-
-
-## Release schedule
-
-Releases will be posted at most once per week, generally on weekends. 
-
-Nightly builds can be found [here](https://github.com/yukieiji/UnityExplorer/actions).
-
-## BepInEx
-
-| Release | IL2CPP(Il2CppInterop) | IL2CPP(Unhollower) | Mono |
-| ------- | ------ |  ------ | ---- |
-| BIE 6.X be.647+ or BIE 6.0-pre.2+ | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx.Unity.IL2CPP.CoreCLR.zip) | ✖️ n/a | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx6.Unity.Mono.zip) |
-| BIE 6.X be.472 to be.577 or BIE 6.0-pre.1(**NOT pre.2**) | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx.IL2CPP.CoreCLR.zip) | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx.IL2CPP.zip)  | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx6.Mono.zip) |
-| BIE 5.X | ✖️ n/a |  ✖️ n/a |  ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.BepInEx5.Mono.zip) |
-
-1. Unzip the release file into a folder
-2. Take the `plugins/sinai-dev-UnityExplorer` folder and place it in `BepInEx/plugins/`
-
-<i>Note: BepInEx 6 is obtainable via [builds.bepinex.dev](https://builds.bepinex.dev/projects/bepinex_be)</i>
-
-## MelonLoader
-
-| Release | IL2CPP | Mono |
-| ------- | ------ | ---- |
-| ML 0.6+  | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.MelonLoader.IL2CPP.CoreCLR.zip) | ✖️ |
-| ML 0.6(**ONLY 0.6 ALPHA BUILD, NOT BETA**)  | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.MelonLoader.IL2CPP.net6preview.zip) | ✖️ |
-| ML 0.5  | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.MelonLoader.IL2CPP.zip) | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.MelonLoader.Mono.zip) | 
-
-1. Unzip the release file into a folder
-2. Copy the DLL inside the `Mods` folder into your MelonLoader `Mods` folder
-3. Copy all of the DLLs inside the `UserLibs` folder into your MelonLoader `UserLibs` folder
-
-## Standalone
-
-| Il2CppInterop | Unhollower | Mono |
-| ------ | ------ | ---- |
-| ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.Standalone.IL2CPP.CoreCLR.zip)| ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.Standalone.IL2CPP.zip) | ✅ [link](https://github.com/yukieiji/UnityExplorer/releases/latest/download/UnityExplorer.Standalone.Mono.zip) | 
-
-The standalone release can be used with any injector or loader of your choice, but it requires you to load the dependencies manually.
-
-1. Ensure the required libs are loaded - UniverseLib, HarmonyX and MonoMod. Take them from the [`UnityExplorer.Editor`](https://github.com/sinai-dev/UnityExplorer/releases/latest/download/UnityExplorer.Editor.zip) release if you need them.
-2. For IL2CPP, load Il2CppAssemblyUnhollower and start an [Il2CppAssemblyUnhollower runtime](https://github.com/knah/Il2CppAssemblyUnhollower#required-external-setup)
-2. Load the UnityExplorer DLL
-3. Create an instance of Unity Explorer with `UnityExplorer.ExplorerStandalone.CreateInstance();`
-4. Optionally subscribe to the `ExplorerStandalone.OnLog` event to handle logging if you wish
-
-## Unity Editor
-
-1. Download the [`UnityExplorer.Editor`](https://github.com/sinai-dev/UnityExplorer/releases/latest/download/UnityExplorer.Editor.zip) release.
-2. Install the package, either by using the Package Manager and importing the `package.json` file, or by manually dragging the folder into your `Assets` folder.
-3. Drag the `Runtime/UnityExplorer` prefab into your scene, or create a GameObject and add the `Explorer Editor Behaviour` script to it.
+If you experience any bugs or would want to see an additional feature inside of this plugin, please reach out by creating a ticket or contacting UGEcko (me) on discord!
 
 # Common issues and solutions
 
@@ -188,10 +129,7 @@ The inspector is used to see detailed information on objects of any type and man
   * Standalone `{DLL_location}\sinai-dev-UnityExplorer\config.cfg`
 
 # Building
-
-1. Run the `build.ps1` powershell script to build UnityExplorer. Releases are found in the `Release` folder.
-
-Building individual configurations from your IDE is fine, though note that the intial build process builds into `Release/<version>/...` instead of the subfolders that the powershell script uses. Batch building is not currently supported with the project.
+*TBD*
 
 # Acknowledgments
 
